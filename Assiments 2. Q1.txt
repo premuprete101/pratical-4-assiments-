@@ -1,0 +1,30 @@
+# Write a NumPy program to multiply a 5×3 matrix by a 3×2 matrix and create a product matrix. Take input data from the user.
+
+
+import numpy as np
+
+print("Enter elements for 5x3 matrix:")
+A = []
+for i in range(5):
+    row = list(map(int, input(f"Enter 3 elements for row {i+1}: ").split()))
+    A.append(row)
+
+print("\nEnter elements for 3x2 matrix:")
+B = []
+for i in range(3):
+    row = list(map(int, input(f"Enter 2 elements for row {i+1}: ").split()))
+    B.append(row)
+
+A = np.array(A)
+B = np.array(B)
+
+product = np.dot(A, B)
+
+print("\nMatrix A:")
+print(A)
+
+print("\nMatrix B:")
+print(B)
+
+print("\nProduct Matrix:")
+print(product)
